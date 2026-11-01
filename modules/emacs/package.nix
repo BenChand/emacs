@@ -6,10 +6,7 @@
       ...
     }:
     let
-      pkgs' = (
-        inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.extend
-          inputs.nix-doom-emacs-unstraightened.overlays.default
-      );
+      pkgs' = pkgs.extend inputs.nix-doom-emacs-unstraightened.overlays.default;
 
       emacs = pkgs'.doomEmacs {
         doomDir = ./config;
