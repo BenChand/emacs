@@ -1,0 +1,16 @@
+version: 2
+enable-beta-ecosystems: true
+updates:
+  - package-ecosystem: "nix"
+    directory: "/"
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 50
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    cooldown:
+      default-days: 7
+    schedule:
+      interval: "weekly"
