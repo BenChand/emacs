@@ -14,5 +14,5 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 #v7.0.1
       - uses: DeterminateSystems/determinate-nix-action@92957199488000b908fdad19f63711000965d8f3 #v3
-      - DeterminateSystems/magic-nix-cache-action@c2f46a0afa5f95fd4c184a533afd280c68cf63ff #0.1.6
+      - uses: DeterminateSystems/magic-nix-cache-action@c2f46a0afa5f95fd4c184a533afd280c68cf63ff #0.1.6
       - run: nix flake check
